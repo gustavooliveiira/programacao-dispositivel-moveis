@@ -117,4 +117,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default DetalhesProduto; b
+export default DetalhesProduto;
