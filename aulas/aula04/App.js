@@ -1,8 +1,10 @@
 // import RegistrarConta from "./screens/RegistrarConta";
-import GaleriaFotos from "./screens/GaleriaFotos";
+//import GaleriaFotos from "./screens/GaleriaFotos";
+
+import Detalhesproduto from "./screens/DetalhesProduto";
 
 function App(){
-  return <GaleriaFotos />
+  return <Detalhesproduto/>
 }
 
 export default App;
