@@ -1,0 +1,27 @@
+import { View, ScrollView, StyleSheet } from "react-native";
+import { TextInput, Button, Text, IconButton } from "react-native-paper";
+
+function LoginScreen (navigation) {
+    return(
+    <ScrollView contentContainerStyle={styles.container}>
+        <View style={{flex:1, padding:16}}>
+        <TextInput label="E-mail" mode="outlined" style={styles.input}/>
+        <TextInput label="Senha" mode="outlined" secureTextEntry style={styles.input}/>
+        <Button mode="contained" onPress={() => {}} style={styles.input}>Entrar</Button>
+        <Text style={styles.info}>Esqueceu sua senha?<Button mode="text" onPress={() => navigation.navigate("Recuperar Senha")}>Recuperar Senha</Button></Text>
+        <Button mode="text" onPress={() => navigation.navigate("CriarConta")}>Criar Conta</Button>
+        </View>
+    </ScrollView>
+    );
+}       
+
+const styles = StyleSheet.create({
+    container: { flexGrow: 1, padding: 16 },
+    title: { textAlign: "center", marginBottom: 24, marginTop: 16 },
+    input: { marginBottom: 16 },
+    info: { textAlign: "center", marginBottom: 16 },
+    link: { color: "#6750A4" },
+    buttonContainer: { flexDirection: "row", justifyContent: "center", },
+});
+
+export default LoginScreen;
