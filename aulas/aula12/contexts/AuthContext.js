@@ -7,7 +7,7 @@ const AuthProvider = ({ children }) => {
   const [usuario, setUsuario] = useState({ login: null, logado: false });
   const [erro, setErro] = useState("");
 
-  const login = async (email, senha) => {
+  const login = async ({ email, senha }) => {
     try {
       await AuthService.signIn({ email, password: senha });
       setUsuario({ login: email, logado: true });
@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
     setUsuario({ login: null, logado: false });
   };
 
-  const registrar = async (email, senha) => {
+  const registrar = async ({ email, senha }) => {
     try {
       await AuthService.signUp({ email, password: senha });
       setUsuario({ login: email, logado: true });
